@@ -326,8 +326,9 @@ function initHeroEntrance() {
         word.innerHTML = `<span class="hero-word-inner">${text}</span>`;
     });
 
-    // 2. Set initial states
+    // 2. Set initial states — inner spans are clipped off-screen, heading can now be visible
     gsap.set('.hero-word-inner', { y: '108%' });
+    gsap.set('.hero-heading', { opacity: 1 });
 
     // 3. Build timeline
     const tl = gsap.timeline({ delay: 0.15 });
@@ -436,7 +437,7 @@ function initRevealHeaders() {
 
         if (subtitle) {
             tl.to(subtitle, {
-                opacity: 1, y: 0,
+                opacity: 1, y: 15,
                 duration: 0.7,
                 ease: 'power3.out'
             }, 0.35);
@@ -655,6 +656,7 @@ function initContactForm() {
 ══════════════════════════════════════════════════════════ */
 function initMobileAccordion() {
     if (window.innerWidth > 768) return;
+
     document.querySelectorAll('[data-accordion="service"]').forEach(card => {
         const header = card.querySelector('.service-accordion-header');
         if (!header) return;
@@ -673,18 +675,15 @@ function initMobileAccordion() {
    MAIN INIT — called after loader exits
 ══════════════════════════════════════════════════════════ */
 function initScrollHints() {
-    document.querySelectorAll('.scroll-hint').forEach(hint => {
-        const selector = hint.dataset.scrollTarget;
-        if (!selector) return;
-        const container = hint.previousElementSibling.matches
-            ? hint.previousElementSibling
-            : document.querySelector(selector);
-        const target = document.querySelector(selector) || container;
-        if (!target) return;
-        target.addEventListener('scroll', function hide() {
-            hint.classList.add('is-hidden');
-            target.removeEventListener('scroll', hide);
-        }, { passive: true });
+    const containers = document.querySelectorAll('.mvv-grid, .expertise-grid, .projects-track, .knowledge-grid');
+    containers.forEach(container => {
+        const hint = container.parentElement.querySelector('.scroll-hint-overlay');
+        if (!hint) return;
+        container.addEventListener('scroll', () => {
+            hint.style.transition = 'opacity 0.3s ease';
+            hint.style.opacity = '0';
+            setTimeout(() => hint.remove(), 300);
+        }, { once: true });
     });
 }
 

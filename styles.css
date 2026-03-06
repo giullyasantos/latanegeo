@@ -241,6 +241,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
     display: inline-block;
     opacity: 0;
     transform: translateY(28px);
+    font-family: var(--font-heading);
 }
 
 .loader-sub {
@@ -496,7 +497,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
 }
 
 .hero-heading {
-    font-size: clamp(4.5rem, 14vw, 17rem);
+    font-size: clamp(3rem, 8vw, 9rem);
     font-weight: 800;
     line-height: 0.88;
     letter-spacing: -0.04em;
@@ -508,6 +509,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
 
 .hero-word { display: block; overflow: hidden; line-height: 0.95; }
 .hero-word-inner { display: block; }
+.hero-heading { opacity: 0; }
 
 /* Section title line-reveal */
 .title-line-wrap {
@@ -1649,7 +1651,7 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
 
     /* ── Hero ─────────────────────────────── */
     .hero { padding: 100px 1.25rem 60px; }
-    .hero-heading { font-size: clamp(2.2rem, 12vw, 3.5rem); margin-left: 0; }
+    .hero-heading { font-size: clamp(3rem, 18vw, 5rem); margin-left: 0; }
     .hero-word { overflow: visible; }
     .hero-desc { font-size: 0.875rem; line-height: 1.75; }
     .hero-actions {
@@ -1870,6 +1872,10 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
         gap: 0.5rem;
     }
 
+    /* ── Loader ───────────────────────────── */
+    .loader-inner { padding: 0 2rem; width: 100%; }
+    .loader-letters { font-size: clamp(1.4rem, 8vw, 2rem); }
+
     /* ── Section heading overlap fix ─────── */
     .title-line-wrap { overflow: visible; }
     .section-title { margin-bottom: 0.5rem; }
@@ -1877,30 +1883,198 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
 }
 
 @media (max-width: 480px) {
-    .hero-heading { font-size: clamp(2rem, 11vw, 2.8rem); }
+    .hero-heading { font-size: clamp(2.8rem, 16vw, 4.5rem); }
     .project-stats { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ══════════════════════════════════════════════════════════
+   TABLET — 600px–1024px
+══════════════════════════════════════════════════════════ */
+
+/* Stats: restore 3-column flex row from 600px up (overrides mobile 2-col grid) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    .hero-stats {
+        display: flex;
+        flex-direction: row;
+        overflow: visible;
+    }
+    .hero-stat {
+        flex: 1;
+        border-left: 1px solid var(--border);
+        border-top: none;
+    }
+    .hero-stat:first-child { border-left: none; }
+    .hero-stat:nth-child(3) {
+        grid-column: unset;
+        border-top: none;
+        border-left: 1px solid var(--border);
+    }
+}
+
+/* Full tablet: container, grids, layout */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container { padding: 0 3rem; max-width: 100%; }
+
+    /* MVV: 2-col on mid-tablet (900px breakpoint made it 1-col) */
+    .mvv-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+
+    /* Knowledge: keep 2-col (900px breakpoint collapsed it to 1-col) */
+    .knowledge-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+
+    /* Footer brand + cols side-by-side */
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 3rem; }
+
+    /* About intro: 2-col (1100px breakpoint collapsed it to 1-col) */
+    .about-intro { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
+/* ── Accordion hint ──────────────────────────────── */
+.accordion-hint {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+    opacity: 0;
+    animation: accordionHintIn 0.6s ease 0.8s forwards;
+    pointer-events: none;
+}
+
+.accordion-hint-text {
+    font-size: 0.6rem;
+    letter-spacing: 0.22em;
+    color: var(--accent-warm);
+}
+
+.accordion-hint-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border: 1px solid var(--accent-warm);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    animation: iconTap 2.4s ease-in-out 1.2s infinite;
+}
+
+.accordion-hint-icon::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 4px;
+    border: 1px solid var(--accent-warm);
+    opacity: 0;
+    animation: iconRipple 2.4s ease-out 1.2s infinite;
+}
+
+.accordion-hint-icon span {
+    display: block;
+    width: 10px;
+    height: 1px;
+    background: var(--accent-warm);
+    transition: width 0.2s ease;
+}
+
+.accordion-hint-icon span:last-child {
+    width: 6px;
+    align-self: flex-start;
+    margin-left: 3px;
+}
+
+@keyframes accordionHintIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes iconTap {
+    0%, 100%  { transform: scale(1); background: transparent; }
+    30%        { transform: scale(0.82); background: rgba(193,127,74,0.15); }
+    50%        { transform: scale(1.06); background: transparent; }
+    65%        { transform: scale(0.97); }
+}
+
+@keyframes iconRipple {
+    0%         { opacity: 0; transform: scale(1); }
+    30%        { opacity: 0.6; transform: scale(1); }
+    100%       { opacity: 0; transform: scale(2); }
+}
+
+@media (min-width: 769px) {
+    .accordion-hint { display: none; }
 }
 
 /* Hidden by default — mobile media query shows it */
 .swipe-hint { display: none; }
 
-/* ── Scroll hint for horizontal scroll containers ── */
-.scroll-hint {
-    display: none;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.65rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--accent-warm);
-    opacity: 0.7;
-    margin-top: 0.75rem;
-    padding-left: 0.5rem;
-    transition: opacity 0.4s ease;
-    pointer-events: none;
+/* ── Scroll hint overlay ──────────────────────────── */
+.scroll-hint-overlay { display: none; }
+
+@media (max-width: 768px) {
+    .scroll-hint-overlay {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        z-index: 20;
+        pointer-events: none;
+        background: rgba(0, 0, 0, 0.55);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        padding: 0.75rem 1.25rem;
+        border: 1px solid rgba(193, 127, 74, 0.3);
+        border-radius: 6px;
+        animation: hintAppear 0.5s ease 0.8s both, hintDisappear 0.5s ease 3.5s forwards;
+    }
+
+    .scroll-hint-text {
+        font-size: 0.6rem;
+        letter-spacing: 0.22em;
+        color: var(--accent-warm);
+    }
+
+    .scroll-hint-arrow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3px;
+    }
+
+    .scroll-hint-arrow span {
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-right: 1.5px solid var(--accent-warm);
+        border-top: 1.5px solid var(--accent-warm);
+        transform: rotate(45deg);
+        animation: chaseRight 0.7s ease-in-out infinite;
+    }
+
+    .scroll-hint-arrow span:nth-child(2) { animation-delay: 0.15s; opacity: 0.6; }
+    .scroll-hint-arrow span:nth-child(3) { animation-delay: 0.3s;  opacity: 0.3; }
+
+    @keyframes hintAppear {
+        from { opacity: 0; transform: translate(-50%, -45%); }
+        to   { opacity: 1; transform: translate(-50%, -50%); }
+    }
+
+    @keyframes hintDisappear {
+        from { opacity: 1; }
+        to   { opacity: 0; }
+    }
+
+    @keyframes chaseRight {
+        0%, 100% { transform: rotate(45deg) translateX(0); }
+        50%       { transform: rotate(45deg) translateX(3px); }
+    }
+
+    .scroll-hint-wrapper { position: relative; }
 }
-@media (max-width: 768px) { .scroll-hint { display: flex; } }
-.scroll-hint.is-hidden { opacity: 0; }
 
 /* Service accordion — chevron hidden on desktop (body always open) */
 .service-accordion-chevron { display: none; }
