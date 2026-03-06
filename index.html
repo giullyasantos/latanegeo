@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <title>Latanegeo - Engenharia Estrutural e Geotécnica | São Paulo</title>
     <meta name="description" content="Latanegeo oferece soluções completas em engenharia estrutural e geotécnica em São Paulo. Consultoria, projetos, ATO, análise crítica e muito mais. Entre em contato!">
     <meta name="keywords" content="engenharia estrutural, geotécnica, consultoria, projetos, ATO, São Paulo, Penha, análise crítica, instrumentação, due diligence">
     <meta name="author" content="Latanegeo">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph Meta Tags -->
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Latanegeo - Engenharia Estrutural e Geotécnica">
     <meta property="og:description" content="Soluções especializadas em engenharia estrutural e geotécnica com foco em gestão de projetos. Atendemos São Paulo e região.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://latanegeo.com.br">
     <meta property="og:locale" content="pt_BR">
-    
-    <!-- Twitter Card Meta Tags -->
+
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Latanegeo - Engenharia Estrutural e Geotécnica">
     <meta name="twitter:description" content="Soluções especializadas em engenharia estrutural e geotécnica com foco em gestão de projetos.">
-    
-    <!-- Canonical URL -->
+
     <link rel="canonical" href="https://latanegeo.com.br">
-    
-    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -51,1177 +49,977 @@
             "addressRegion": "São Paulo",
             "addressCountry": "BR"
         },
-        "sameAs": [
-            "https://linkedin.com/company/latanegeo"
-        ]
+        "sameAs": ["https://linkedin.com/company/latanegeo"]
     }
     </script>
 </head>
 <body>
-    <!-- Professional Loading Screen -->
-    <div id="loading-screen" class="loading-screen">
-        <div class="loading-content">
-            <!-- Background Grid Pattern -->
-            <div class="loading-bg-pattern"></div>
-            
-            <!-- Main Loading Container -->
-            <div class="loading-container">
-                <!-- Company Logo -->
-                <div class="loading-logo">
-                    <svg width="80" height="80" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" rx="8" fill="#083d4f"/>
-                        <path d="M8 32L32 8M12 28L28 12" stroke="#81bdd3" stroke-width="3" stroke-linecap="round"/>
-                        <circle cx="20" cy="20" r="3" fill="#cb8b5b"/>
-                    </svg>
-                    <h2 class="loading-company-name">LATANEGEO</h2>
-                </div>
-                
-                <!-- Loading Animation -->
-                <div class="loading-animation">
-                    <div class="loading-spinner">
-                        <div class="spinner-ring"></div>
-                        <div class="spinner-ring"></div>
-                        <div class="spinner-ring"></div>
-                    </div>
-                </div>
-                
-                <!-- Loading Progress -->
-                <div class="loading-progress">
-                    <div class="progress-text">
-                        <span id="loading-percentage">0</span><span class="percentage-symbol">%</span>
-                    </div>
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" id="progress-bar"></div>
-                    </div>
-                    <div class="loading-status" id="loading-status">Iniciando...</div>
-                </div>
+
+<!-- ═══════════════════════════════════════
+     LOADER
+═══════════════════════════════════════ -->
+<div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-inner">
+
+        <!-- Blueprint SVG -->
+        <svg class="loader-blueprint" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect class="bp-frame" x="1.5" y="1.5" width="257" height="257" stroke="#81bdd3" stroke-width="1"/>
+            <!-- Corner brackets -->
+            <polyline class="bp-corner" points="1.5,40 1.5,1.5 40,1.5" stroke="#c17f4a" stroke-width="1.5" fill="none"/>
+            <polyline class="bp-corner" points="220,1.5 258.5,1.5 258.5,40" stroke="#c17f4a" stroke-width="1.5" fill="none"/>
+            <polyline class="bp-corner" points="1.5,220 1.5,258.5 40,258.5" stroke="#c17f4a" stroke-width="1.5" fill="none"/>
+            <polyline class="bp-corner" points="220,258.5 258.5,258.5 258.5,220" stroke="#c17f4a" stroke-width="1.5" fill="none"/>
+            <!-- Cross lines -->
+            <line class="bp-cross" x1="130" y1="1.5" x2="130" y2="258.5" stroke="#81bdd3" stroke-width="0.5" stroke-dasharray="4 4"/>
+            <line class="bp-cross" x1="1.5" y1="130" x2="258.5" y2="130" stroke="#81bdd3" stroke-width="0.5" stroke-dasharray="4 4"/>
+            <!-- Center circle -->
+            <circle class="bp-circle" cx="130" cy="130" r="50" stroke="#81bdd3" stroke-width="0.8"/>
+            <circle class="bp-circle-inner" cx="130" cy="130" r="18" stroke="#c17f4a" stroke-width="0.8"/>
+            <!-- Center dot -->
+            <circle cx="130" cy="130" r="3.5" fill="#c17f4a" class="bp-dot"/>
+        </svg>
+
+        <!-- Company name -->
+        <div class="loader-brand">
+            <div class="loader-letters" aria-label="LATANEGEO">
+                <span>L</span><span>A</span><span>T</span><span>A</span><span>N</span><span>E</span><span>G</span><span>E</span><span>O</span>
             </div>
-            
-            <!-- Geometric Elements -->
-            <div class="loading-geometry">
-                <div class="geo-element geo-1"></div>
-                <div class="geo-element geo-2"></div>
-                <div class="geo-element geo-3"></div>
-                <div class="geo-element geo-4"></div>
+            <p class="loader-sub">Engenharia Estrutural &amp; Geotécnica</p>
+        </div>
+
+        <!-- Progress -->
+        <div class="loader-progress">
+            <div class="loader-bar-track">
+                <div class="loader-bar-fill" id="loaderFill"></div>
+            </div>
+            <div class="loader-pct-wrap">
+                <span id="loaderPct">0</span><span>%</span>
             </div>
         </div>
-    </div>
 
-    <!-- Main Website Content Container -->
-    <div class="main-website-content">
-        <header class="header">
-        <div class="container">
-            <div class="nav-brand">
-                <div class="company-logo">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="40" height="40" rx="8" fill="#083d4f"/>
-                        <path d="M8 32L32 8M12 28L28 12" stroke="#81bdd3" stroke-width="3" stroke-linecap="round"/>
-                        <circle cx="20" cy="20" r="3" fill="#cb8b5b"/>
-                    </svg>
-                </div>
-                <div class="brand-text">
-                    <h1 class="logo">Latanegeo</h1>
-                    <p class="tagline">Engenharia Estrutural & Geotécnica</p>
-                </div>
-            </div>
-            <nav class="nav">
-                <ul class="nav-menu">
-                    <li><a href="#inicial" class="nav-link active">Inicial</a></li>
-                    <li><a href="#latanegeo" class="nav-link">LatanEGeo</a></li>
-                    <li><a href="#servicos" class="nav-link">Serviços</a></li>
-                    <li><a href="#projetos" class="nav-link">Projetos</a></li>
-                    <li><a href="#know-hall" class="nav-link">Know Hall</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
+    </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════
+     SITE
+═══════════════════════════════════════ -->
+<div id="site">
+
+    <!-- HEADER -->
+    <header id="header" class="header">
+        <div class="container header-inner">
+            <a href="#inicial" class="header-logo">
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" rx="6" fill="#c17f4a"/>
+                    <path d="M8 32L32 8M12 28L28 12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                    <circle cx="20" cy="20" r="3" fill="#0a0e1a"/>
+                </svg>
+                <span class="header-logo-text">Latanegeo</span>
+            </a>
+
+            <nav class="nav" aria-label="Navegação principal">
+                <ul class="nav-list">
+                    <li><a href="#inicial" class="nav-link active"><span>Inicial</span></a></li>
+                    <li><a href="#latanegeo" class="nav-link"><span>LatanEGeo</span></a></li>
+                    <li><a href="#servicos" class="nav-link"><span>Serviços</span></a></li>
+                    <li><a href="#projetos" class="nav-link"><span>Projetos</span></a></li>
+                    <li><a href="#know-hall" class="nav-link"><span>Know Hall</span></a></li>
+                    <li><a href="#contato" class="nav-link"><span>Contato</span></a></li>
                 </ul>
-                <div class="nav-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
             </nav>
+
+            <a href="#contato" class="header-cta">Orçamento</a>
+
+            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <main>
+
+        <!-- ═══ HERO ═══ -->
         <section id="inicial" class="hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-logo-section">
-                        <div class="hero-company-logo">
-                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="80" height="80" rx="16" fill="#083d4f"/>
-                                <path d="M16 64L64 16M24 56L56 24" stroke="#81bdd3" stroke-width="4" stroke-linecap="round"/>
-                                <circle cx="40" cy="40" r="6" fill="#cb8b5b"/>
-                                <rect x="32" y="12" width="16" height="4" fill="#81bdd3" rx="2"/>
-                                <rect x="32" y="64" width="16" height="4" fill="#81bdd3" rx="2"/>
-                                <rect x="12" y="32" width="4" height="16" fill="#81bdd3" rx="2"/>
-                                <rect x="64" y="32" width="4" height="16" fill="#81bdd3" rx="2"/>
-                            </svg>
+            <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+            <div class="container hero-container">
+                <div class="hero-inner">
+                    <p class="hero-eyebrow">São Paulo · Brasil · Engenharia de Excelência</p>
+
+                    <h1 class="hero-heading" aria-label="Engenharia">
+                        <span class="hero-word">ENGENHA</span><span class="hero-word hero-accent-word">RIA</span>
+                    </h1>
+
+                    <div class="hero-bottom">
+                        <div class="hero-left">
+                            <p class="hero-desc">
+                                Especialistas em projetos estruturais e geotécnicos com excelência técnica e compromisso com a qualidade. Transformamos desafios em soluções seguras e sustentáveis.
+                            </p>
+                            <div class="hero-actions">
+                                <a href="#projetos" class="btn btn-primary">
+                                    <span>Ver Nossos Projetos</span>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </a>
+                                <a href="#contato" class="btn btn-ghost">
+                                    <span>Solicitar Orçamento</span>
+                                </a>
+                            </div>
                         </div>
-                        <div class="hero-brand">
-                            <h1 class="hero-company-name">Latanegeo</h1>
-                            <p class="hero-company-tagline">Engenharia Estrutural & Geotécnica</p>
+
+                        <div class="hero-stats" role="list">
+                            <div class="hero-stat" role="listitem">
+                                <div class="stat-num">
+                                    <span class="count" data-target="15">0</span><span class="stat-plus">+</span>
+                                </div>
+                                <div class="stat-label">Anos de Experiência</div>
+                            </div>
+                            <div class="hero-stat stat-divider" role="listitem">
+                                <div class="stat-num">
+                                    <span class="count" data-target="200">0</span><span class="stat-plus">+</span>
+                                </div>
+                                <div class="stat-label">Projetos Realizados</div>
+                            </div>
+                            <div class="hero-stat" role="listitem">
+                                <div class="stat-num">
+                                    <span class="count" data-target="50">0</span><span class="stat-plus">+</span>
+                                </div>
+                                <div class="stat-label">Clientes Atendidos</div>
+                            </div>
                         </div>
-                    </div>
-                    <h2 class="hero-title">Soluções Inovadoras em Engenharia</h2>
-                    <p class="hero-subtitle">Especialistas em projetos estruturais e geotécnicos com excelência técnica e compromisso com a qualidade. Transformamos desafios em soluções seguras e sustentáveis.</p>
-                    <div class="hero-buttons">
-                        <a href="#projetos" class="btn btn-primary">Ver Nossos Projetos</a>
-                        <a href="#contato" class="btn btn-secondary">Solicitar Orçamento</a>
-                        <a href="#latanegeo" class="btn btn-outline">Conheça a Empresa</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="hero-main-image">
-                        <svg width="500" height="400" viewBox="0 0 500 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <!-- Background -->
-                            <rect width="500" height="400" fill="url(#heroGradient)"/>
-                            
-                            <!-- Building Structure -->
-                            <rect x="50" y="150" width="120" height="200" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
-                            <rect x="200" y="100" width="150" height="250" fill="#f1f5f9" stroke="#94a3b8" stroke-width="2"/>
-                            <rect x="380" y="130" width="100" height="220" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
-                            
-                            <!-- Windows -->
-                            <rect x="70" y="180" width="20" height="25" fill="#3b82f6" opacity="0.7"/>
-                            <rect x="100" y="180" width="20" height="25" fill="#3b82f6" opacity="0.7"/>
-                            <rect x="70" y="220" width="20" height="25" fill="#3b82f6" opacity="0.7"/>
-                            <rect x="100" y="220" width="20" height="25" fill="#3b82f6" opacity="0.7"/>
-                            
-                            <rect x="220" y="130" width="25" height="30" fill="#3b82f6" opacity="0.7"/>
-                            <rect x="260" y="130" width="25" height="30" fill="#3b82f6" opacity="0.7"/>
-                            <rect x="300" y="130" width="25" height="30" fill="#3b82f6" opacity="0.7"/>
-                            
-                            <!-- Structural Lines -->
-                            <path d="M50 350L170 350M200 350L350 350M380 350L480 350" stroke="#1e40af" stroke-width="3"/>
-                            <path d="M110 150L110 50M275 100L275 30M430 130L430 40" stroke="#1e40af" stroke-width="2" stroke-dasharray="5,5"/>
-                            
-                            <!-- Ground Level -->
-                            <rect x="0" y="350" width="500" height="50" fill="#94a3b8" opacity="0.3"/>
-                            
-                            <!-- Technical Measurements -->
-                            <path d="M50 380L170 380" stroke="#1e40af" stroke-width="2"/>
-                            <text x="110" y="395" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="500">120m</text>
-                            
-                            <path d="M200 380L350 380" stroke="#1e40af" stroke-width="2"/>
-                            <text x="275" y="395" text-anchor="middle" fill="#1e40af" font-size="10" font-weight="500">150m</text>
-                            
-                            <defs>
-                                <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" stop-color="#f8fafc"/>
-                                    <stop offset="100%" stop-color="#e2e8f0"/>
-                                </linearGradient>
-                            </defs>
-                        </svg>
                     </div>
                 </div>
             </div>
+
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span class="scroll-text">Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
         </section>
-        
-        <!-- Client Logos Section -->
+
+
+        <!-- ═══ CLIENTS MARQUEE ═══ -->
         <section class="clients">
             <div class="container">
                 <div class="clients-header">
-                    <h2 class="clients-title">Nossos Clientes Confiam em Nós</h2>
-                    <p class="clients-subtitle">Trabalhamos com as principais empresas e organizações do setor</p>
+                    <h2 class="section-label">Nossos Clientes</h2>
+                    <p>Trabalhamos com as principais empresas e organizações do setor</p>
                 </div>
-                <div class="clients-grid">
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="10" y="15" width="100" height="30" rx="4" fill="#64748b"/>
-                            <text x="60" y="35" text-anchor="middle" fill="white" font-size="12" font-weight="600">CONSTRUTORA ABC</text>
-                        </svg>
+            </div>
+
+            <div class="marquee-outer">
+                <!-- Row 1: forward -->
+                <div class="marquee-row marquee-forward">
+                    <div class="marquee-track">
+                        <div class="client-logo"><img src="imagens/client-cte.jpeg" alt="CTE" loading="lazy"></div>
+                        <div class="client-logo"><img src="imagens/client-gerdau.jpeg" alt="Gerdau" loading="lazy"></div>
+                        <div class="client-logo"><img src="imagens/client-fgmore.jpeg" alt="FG Moretti" loading="lazy"></div>
+                        <div class="client-logo"><img src="imagens/client-infra7.jpeg" alt="Infra7" loading="lazy"></div>
+                        <div class="client-logo"><img src="imagens/client-worleyparsons.jpeg" alt="WorleyParsons" loading="lazy"></div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-cte.jpeg" alt="" loading="lazy"></div>
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-gerdau.jpeg" alt="" loading="lazy"></div>
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-fgmore.jpeg" alt="" loading="lazy"></div>
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-infra7.jpeg" alt="" loading="lazy"></div>
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-worleyparsons.jpeg" alt="" loading="lazy"></div>
                     </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="60" cy="30" r="25" fill="#3b82f6"/>
-                            <text x="60" y="35" text-anchor="middle" fill="white" font-size="10" font-weight="600">ENGENHARIA XYZ</text>
-                        </svg>
-                    </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <polygon points="60,10 80,25 80,35 60,50 40,35 40,25" fill="#10b981"/>
-                            <text x="60" y="35" text-anchor="middle" fill="white" font-size="9" font-weight="600">GRUPO ALFA</text>
-                        </svg>
-                    </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="20" y="20" width="80" height="20" rx="10" fill="#f59e0b"/>
-                            <text x="60" y="33" text-anchor="middle" fill="white" font-size="10" font-weight="600">BETA CONSTRUÇÕES</text>
-                        </svg>
-                    </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M30 45L60 15L90 45H75V45H45V45Z" fill="#8b5cf6"/>
-                            <text x="60" y="53" text-anchor="middle" fill="#8b5cf6" font-size="9" font-weight="600">GAMMA LTDA</text>
-                        </svg>
-                    </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="25" y="18" width="70" height="24" rx="12" fill="#ef4444"/>
-                            <text x="60" y="33" text-anchor="middle" fill="white" font-size="10" font-weight="600">DELTA OBRAS</text>
-                        </svg>
-                    </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="15" y="12" width="90" height="36" rx="6" fill="#06b6d4"/>
-                            <text x="60" y="33" text-anchor="middle" fill="white" font-size="11" font-weight="600">EPSILON ENG</text>
-                        </svg>
-                    </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <ellipse cx="60" cy="30" rx="35" ry="20" fill="#84cc16"/>
-                            <text x="60" y="35" text-anchor="middle" fill="white" font-size="10" font-weight="600">ZETA PROJETOS</text>
-                        </svg>
-                    </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="30" y="15" width="60" height="30" rx="8" fill="#6366f1"/>
-                            <text x="60" y="33" text-anchor="middle" fill="white" font-size="9" font-weight="600">ETA CORP</text>
-                        </svg>
-                    </div>
-                    <div class="client-logo">
-                        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M40 20L80 20L70 40L50 40Z" fill="#ec4899"/>
-                            <text x="60" y="47" text-anchor="middle" fill="#ec4899" font-size="9" font-weight="600">THETA BUILDING</text>
-                        </svg>
+                </div>
+
+                <!-- Row 2: reverse -->
+                <div class="marquee-row marquee-reverse">
+                    <div class="marquee-track">
+                        <div class="client-logo"><img src="imagens/client-agis.jpeg" alt="Agis" loading="lazy"></div>
+                        <div class="client-logo"><img src="imagens/client-pini.jpeg" alt="Pini" loading="lazy"></div>
+                        <div class="client-logo"><img src="imagens/client-sesc.jpeg" alt="Sesc" loading="lazy"></div>
+                        <div class="client-logo"><img src="imagens/client-themag.jpeg" alt="Themag" loading="lazy"></div>
+                        <!-- Duplicate -->
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-agis.jpeg" alt="" loading="lazy"></div>
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-pini.jpeg" alt="" loading="lazy"></div>
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-sesc.jpeg" alt="" loading="lazy"></div>
+                        <div class="client-logo" aria-hidden="true"><img src="imagens/client-themag.jpeg" alt="" loading="lazy"></div>
                     </div>
                 </div>
             </div>
         </section>
 
+
+        <!-- ═══ ABOUT ═══ -->
         <section id="latanegeo" class="about">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">LatanEGeo</h2>
-                    <p class="section-subtitle">Conheça nossa empresa e nossa trajetória</p>
+                <div class="section-header reveal-header">
+                    <span class="section-label">LatanEGeo</span>
+                    <h2 class="section-title">Conheça nossa<br>empresa</h2>
+                    <p class="section-subtitle">Referência em engenharia estrutural e geotécnica</p>
                 </div>
-                
-                <!-- Company Description -->
-                <div class="company-description">
-                    <div class="company-intro">
-                        <h3 class="company-intro-title">Sobre a Empresa</h3>
-                        <p class="company-intro-text">
-                            É especializada em projetos de engenharia estrutural e geotecnia, com um diferencial no foco em gestão de projetos. Nossa empresa combina expertise técnica com metodologias modernas de gestão, garantindo a execução eficiente e de alta qualidade de cada empreendimento.
-                        </p>
-                        <p class="company-intro-text">
-                            Com anos de experiência no mercado, a Latanegeo se consolidou como referência em soluções estruturais e geotécnicas, atendendo desde projetos residenciais até grandes obras de infraestrutura. Nossa abordagem integrada permite entregar projetos completos, seguros e sustentáveis.
-                        </p>
+
+                <div class="about-intro reveal-block">
+                    <p>É especializada em projetos de engenharia estrutural e geotecnia, com um diferencial no foco em gestão de projetos. Nossa empresa combina expertise técnica com metodologias modernas de gestão, garantindo a execução eficiente e de alta qualidade de cada empreendimento.</p>
+                    <p>Com anos de experiência no mercado, a Latanegeo se consolidou como referência em soluções estruturais e geotécnicas, atendendo desde projetos residenciais até grandes obras de infraestrutura.</p>
+                </div>
+
+                <!-- MVV Cards -->
+                <div class="mvv-grid">
+                    <div class="mvv-card reveal-card">
+                        <div class="mvv-card-accent"></div>
+                        <div class="mvv-icon">
+                            <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+                                <path d="M24 8L28 20H40L30 28L34 40L24 32L14 40L18 28L8 20H20L24 8Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Missão</h3>
+                        <p>Fornecer soluções de engenharia estrutural e geotécnica de excelência, com foco na gestão eficiente de projetos, garantindo segurança, qualidade e sustentabilidade em cada empreendimento.</p>
+                    </div>
+
+                    <div class="mvv-card reveal-card">
+                        <div class="mvv-card-accent"></div>
+                        <div class="mvv-icon">
+                            <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+                                <path d="M24 12C18 12 13 17 13 23C13 29 24 36 24 36S35 29 35 23C35 17 30 12 24 12ZM24 27C21.8 27 20 25.2 20 23S21.8 19 24 19S28 20.8 28 23S26.2 27 24 27Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Visão</h3>
+                        <p>Ser reconhecida como a principal referência em engenharia estrutural e geotécnica no Brasil, destacando-se pela inovação, excelência técnica e pela capacidade de transformar desafios complexos em soluções eficientes.</p>
+                    </div>
+
+                    <div class="mvv-card reveal-card">
+                        <div class="mvv-card-accent"></div>
+                        <div class="mvv-icon">
+                            <svg width="32" height="32" viewBox="0 0 48 48" fill="none">
+                                <path d="M24 6L26.09 16.26L36 14L33.74 24L44 26.09L33.74 28.18L36 38L26.09 35.74L24 46L21.91 35.74L12 38L14.26 28.18L4 26.09L14.26 24L12 14L21.91 16.26L24 6Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3>Valores</h3>
+                        <ul class="mvv-values">
+                            <li><strong>Excelência Técnica</strong> — Qualidade superior em todos os projetos</li>
+                            <li><strong>Gestão Eficiente</strong> — Metodologias modernas e controle rigoroso</li>
+                            <li><strong>Sustentabilidade</strong> — Soluções que respeitam o meio ambiente</li>
+                            <li><strong>Inovação</strong> — Novas tecnologias e métodos aplicados</li>
+                            <li><strong>Segurança</strong> — Prioridade absoluta em todas as etapas</li>
+                        </ul>
                     </div>
                 </div>
+                <p class="swipe-hint">← deslize →</p>
 
-                <!-- Mission, Vision, Values Cards -->
-                <div class="mvv-section">
-                    <div class="mvv-cards">
-                        <div class="mvv-card mission-card">
-                            <div class="mvv-icon">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="24" cy="24" r="20" fill="#3b82f6" opacity="0.1"/>
-                                    <path d="M24 8L28 20H40L30 28L34 40L24 32L14 40L18 28L8 20H20L24 8Z" fill="#3b82f6"/>
-                                </svg>
-                            </div>
-                            <h3 class="mvv-title">Missão</h3>
-                            <p class="mvv-description">
-                                Fornecer soluções de engenharia estrutural e geotécnica de excelência, com foco na gestão eficiente de projetos, garantindo segurança, qualidade e sustentabilidade em cada empreendimento que desenvolvemos.
-                            </p>
-                        </div>
-
-                        <div class="mvv-card vision-card">
-                            <div class="mvv-icon">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="24" cy="24" r="20" fill="#10b981" opacity="0.1"/>
-                                    <path d="M24 12C18 12 13 17 13 23C13 29 24 36 24 36S35 29 35 23C35 17 30 12 24 12ZM24 27C21.8 27 20 25.2 20 23S21.8 19 24 19S28 20.8 28 23S26.2 27 24 27Z" fill="#10b981"/>
-                                </svg>
-                            </div>
-                            <h3 class="mvv-title">Visão</h3>
-                            <p class="mvv-description">
-                                Ser reconhecida como a principal referência em engenharia estrutural e geotécnica no Brasil, destacando-se pela inovação, excelência técnica e pela capacidade de transformar desafios complexos em soluções sustentáveis e eficientes.
-                            </p>
-                        </div>
-
-                        <div class="mvv-card values-card">
-                            <div class="mvv-icon">
-                                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="24" cy="24" r="20" fill="#f59e0b" opacity="0.1"/>
-                                    <path d="M24 6L26.09 16.26L36 14L33.74 24L44 26.09L33.74 28.18L36 38L26.09 35.74L24 46L21.91 35.74L12 38L14.26 28.18L4 26.09L14.26 24L12 14L21.91 16.26L24 6Z" fill="#f59e0b"/>
-                                </svg>
-                            </div>
-                            <h3 class="mvv-title">Valores</h3>
-                            <div class="values-list">
-                                <ul>
-                                    <li><strong>Excelência Técnica:</strong> Compromisso com a qualidade superior em todos os projetos</li>
-                                    <li><strong>Gestão Eficiente:</strong> Otimização de recursos e prazos através de metodologias modernas</li>
-                                    <li><strong>Sustentabilidade:</strong> Soluções que respeitam o meio ambiente e as gerações futuras</li>
-                                    <li><strong>Inovação:</strong> Aplicação constante de novas tecnologias e métodos</li>
-                                    <li><strong>Transparência:</strong> Comunicação clara e honesta com clientes e parceiros</li>
-                                    <li><strong>Segurança:</strong> Prioridade absoluta em todas as etapas dos projetos</li>
-                                </ul>
-                            </div>
-                        </div>
+                <!-- Expertise -->
+                <div class="expertise-grid">
+                    <div class="expertise-item reveal-card">
+                        <div class="expertise-num">01</div>
+                        <h4>Projetos Estruturais</h4>
+                        <p>Desenvolvimento de projetos estruturais completos com tecnologia avançada e foco na segurança</p>
                     </div>
-                </div>
-
-                <!-- Expertise Areas -->
-                <div class="expertise-section">
-                    <h3 class="expertise-title">Nossas Especialidades</h3>
-                    <div class="expertise-grid">
-                        <div class="expertise-item">
-                            <div class="expertise-icon">🏗️</div>
-                            <h4>Projetos Estruturais</h4>
-                            <p>Desenvolvimento de projetos estruturais completos com tecnologia avançada e foco na segurança</p>
-                        </div>
-                        <div class="expertise-item">
-                            <div class="expertise-icon">🌍</div>
-                            <h4>Análise Geotécnica</h4>
-                            <p>Estudos detalhados do solo e projetos de fundações especializadas para diferentes tipos de terreno</p>
-                        </div>
-                        <div class="expertise-item">
-                            <div class="expertise-icon">📊</div>
-                            <h4>Gestão de Projetos</h4>
-                            <p>Coordenação eficiente de projetos com metodologias modernas e controle rigoroso de qualidade</p>
-                        </div>
-                        <div class="expertise-item">
-                            <div class="expertise-icon">⚡</div>
-                            <h4>Soluções Inovadoras</h4>
-                            <p>Aplicação de tecnologias de ponta e métodos inovadores para soluções personalizadas</p>
-                        </div>
+                    <div class="expertise-item reveal-card">
+                        <div class="expertise-num">02</div>
+                        <h4>Análise Geotécnica</h4>
+                        <p>Estudos detalhados do solo e projetos de fundações especializadas para diferentes tipos de terreno</p>
+                    </div>
+                    <div class="expertise-item reveal-card">
+                        <div class="expertise-num">03</div>
+                        <h4>Gestão de Projetos</h4>
+                        <p>Coordenação eficiente com metodologias modernas e controle rigoroso de qualidade</p>
+                    </div>
+                    <div class="expertise-item reveal-card">
+                        <div class="expertise-num">04</div>
+                        <h4>Soluções Inovadoras</h4>
+                        <p>Aplicação de tecnologias de ponta e métodos inovadores para soluções personalizadas</p>
                     </div>
                 </div>
             </div>
         </section>
 
+
+        <!-- ═══ SERVICES ═══ -->
         <section id="servicos" class="services">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Serviços</h2>
+                <div class="section-header reveal-header">
+                    <span class="section-label">Serviços</span>
+                    <h2 class="section-title">Expertise técnica<br>abrangente</h2>
                     <p class="section-subtitle">Soluções completas em engenharia estrutural e geotécnica</p>
                 </div>
-                
-                <!-- Services Introduction -->
-                <div class="services-intro">
-                    <div class="intro-content">
-                        <h3 class="intro-title">Expertise Técnica Abrangente</h3>
-                        <p class="intro-description">
-                            A Latanegeo oferece uma gama completa de serviços especializados em engenharia estrutural e geotécnica, 
-                            desde estudos de viabilidade até a execução de projetos complexos. Nossa equipe multidisciplinar garante 
-                            excelência técnica em todas as fases do seu empreendimento.
-                        </p>
-                    </div>
-                </div>
 
-                <!-- Services Grid -->
                 <div class="services-grid">
-                    <!-- Consultoria -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#3b82f6" opacity="0.1"/>
-                                <path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16S32.8 8 24 8zm4 24h-8v-2h8v2zm0-4h-8v-2h8v2zm0-4h-8v-2h8v2z" fill="#3b82f6"/>
-                            </svg>
+
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">01</span>
+                                    <h3 class="service-title">Consultoria</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M24 8C15.2 8 8 15.2 8 24s7.2 16 16 16 16-7.2 16-16S32.8 8 24 8zm4 24h-8v-2h8v2zm0-4h-8v-2h8v2zm0-4h-8v-2h8v2z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Assessoria técnica especializada para tomada de decisões estratégicas em projetos de engenharia. Análise técnica detalhada e recomendações de soluções otimizadas.</p>
+                                    <ul class="service-features">
+                                        <li>Análise técnica e econômica</li>
+                                        <li>Recomendações especializadas</li>
+                                        <li>Suporte à tomada de decisão</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Consultoria</h3>
-                        <p class="service-description">
-                            Assessoria técnica especializada para tomada de decisões estratégicas em projetos de engenharia. 
-                            Oferecemos análise técnica detalhada, recomendações de soluções otimizadas e suporte na escolha 
-                            das melhores alternativas técnicas e econômicas para seu projeto.
-                        </p>
-                        <ul class="service-features">
-                            <li>Análise técnica e econômica</li>
-                            <li>Recomendações especializadas</li>
-                            <li>Suporte à tomada de decisão</li>
-                        </ul>
                     </div>
 
-                    <!-- A.T.O. -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#10b981" opacity="0.1"/>
-                                <path d="M24 6L32 18H16L24 6Z" fill="#10b981"/>
-                                <rect x="20" y="18" width="8" height="20" fill="#10b981"/>
-                                <path d="M16 38H32V42H16V38Z" fill="#10b981"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">02</span>
+                                    <h3 class="service-title">A.T.O.</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M24 6L32 18H16L24 6Z" fill="currentColor"/>
+                                            <rect x="20" y="18" width="8" height="20" fill="currentColor"/>
+                                            <path d="M16 38H32V42H16V38Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Acompanhamento Técnico de Obra — supervisão especializada durante a execução, garantindo conformidade com projetos, normas técnicas e padrões de qualidade.</p>
+                                    <ul class="service-features">
+                                        <li>Supervisão técnica contínua</li>
+                                        <li>Controle de qualidade</li>
+                                        <li>Relatórios de acompanhamento</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">A.T.O. (Acompanhamento Técnico de Obra)</h3>
-                        <p class="service-description">
-                            Acompanhamento técnico especializado durante a execução da obra, garantindo conformidade com 
-                            projetos, normas técnicas e padrões de qualidade. Supervisão contínua das atividades construtivas 
-                            com relatórios detalhados e controle rigoroso.
-                        </p>
-                        <ul class="service-features">
-                            <li>Supervisão técnica contínua</li>
-                            <li>Controle de qualidade</li>
-                            <li>Relatórios de acompanhamento</li>
-                        </ul>
                     </div>
 
-                    <!-- Análise Crítica -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#f59e0b" opacity="0.1"/>
-                                <path d="M24 8L30 20H18L24 8Z" fill="#f59e0b"/>
-                                <circle cx="24" cy="32" r="3" fill="#f59e0b"/>
-                                <rect x="22" y="22" width="4" height="8" fill="#f59e0b"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">03</span>
+                                    <h3 class="service-title">Análise Crítica</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M24 8L30 20H18L24 8Z" fill="currentColor"/>
+                                            <circle cx="24" cy="32" r="3" fill="currentColor"/>
+                                            <rect x="22" y="22" width="4" height="8" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Revisão técnica minuciosa de projetos existentes, identificando possíveis inconsistências, otimizações e melhorias. Avaliação crítica com base em critérios técnicos, econômicos e normativos.</p>
+                                    <ul class="service-features">
+                                        <li>Revisão técnica detalhada</li>
+                                        <li>Identificação de melhorias</li>
+                                        <li>Validação de soluções</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Análise Crítica</h3>
-                        <p class="service-description">
-                            Revisão técnica minuciosa de projetos existentes, identificando possíveis inconsistências, 
-                            otimizações e melhorias. Avaliação crítica de soluções propostas com base em critérios técnicos, 
-                            econômicos e normativos, garantindo a viabilidade e segurança do projeto.
-                        </p>
-                        <ul class="service-features">
-                            <li>Revisão técnica detalhada</li>
-                            <li>Identificação de melhorias</li>
-                            <li>Validação de soluções</li>
-                        </ul>
                     </div>
 
-                    <!-- Instrumentação -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#8b5cf6" opacity="0.1"/>
-                                <path d="M12 24L20 16V20H28V28H20V32L12 24Z" fill="#8b5cf6"/>
-                                <circle cx="36" cy="24" r="6" fill="#8b5cf6"/>
-                                <path d="M32 20L40 28M40 20L32 28" stroke="white" stroke-width="2"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">04</span>
+                                    <h3 class="service-title">Instrumentação</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M12 24L20 16V20H28V28H20V32L12 24Z" fill="currentColor"/>
+                                            <circle cx="36" cy="24" r="6" fill="currentColor" opacity="0.6"/>
+                                            <path d="M32 20L40 28M40 20L32 28" stroke="currentColor" stroke-width="1.5"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Monitoramento e interpretação de dados de instrumentação geotécnica e estrutural. Análise de comportamento de estruturas através de sensores e equipamentos especializados.</p>
+                                    <ul class="service-features">
+                                        <li>Monitoramento em tempo real</li>
+                                        <li>Interpretação de dados</li>
+                                        <li>Sistema de alertas</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Análise e Acompanhamento da Instrumentação</h3>
-                        <p class="service-description">
-                            Monitoramento e interpretação de dados de instrumentação geotécnica e estrutural. 
-                            Análise de comportamento de estruturas através de sensores, inclinômetros, piezômetros 
-                            e outros equipamentos, fornecendo alertas e recomendações baseadas nos dados coletados.
-                        </p>
-                        <ul class="service-features">
-                            <li>Monitoramento em tempo real</li>
-                            <li>Interpretação de dados</li>
-                            <li>Sistema de alertas</li>
-                        </ul>
                     </div>
 
-                    <!-- Projeto de Recuperação -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#ef4444" opacity="0.1"/>
-                                <path d="M24 6C15.2 6 8 13.2 8 22C8 30.8 15.2 38 24 38C32.8 38 40 30.8 40 22C40 13.2 32.8 6 24 6ZM24 34C17.4 34 12 28.6 12 22C12 15.4 17.4 10 24 10C30.6 10 36 15.4 36 22C36 28.6 30.6 34 24 34Z" fill="#ef4444"/>
-                                <path d="M20 18H28V22H20V18ZM20 26H28V30H20V26Z" fill="#ef4444"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">05</span>
+                                    <h3 class="service-title">Projeto de Recuperação</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M24 6C15.2 6 8 13.2 8 22C8 30.8 15.2 38 24 38C32.8 38 40 30.8 40 22C40 13.2 32.8 6 24 6ZM24 34C17.4 34 12 28.6 12 22C12 15.4 17.4 10 24 10C30.6 10 36 15.4 36 22C36 28.6 30.6 34 24 34Z" fill="currentColor"/>
+                                            <path d="M20 18H28V22H20V18ZM20 26H28V30H20V26Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Soluções para recuperação e reforço estrutural de edificações. Diagnóstico de patologias, especificação de materiais e técnicas de reparo para durabilidade e segurança.</p>
+                                    <ul class="service-features">
+                                        <li>Diagnóstico de patologias</li>
+                                        <li>Projeto de reforço estrutural</li>
+                                        <li>Especificações técnicas</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Projeto de Recuperação</h3>
-                        <p class="service-description">
-                            Desenvolvimento de soluções para recuperação e reforço estrutural de edificações e obras de arte. 
-                            Diagnóstico de patologias, especificação de materiais e técnicas de reparo, garantindo a 
-                            durabilidade e segurança das estruturas existentes.
-                        </p>
-                        <ul class="service-features">
-                            <li>Diagnóstico de patologias</li>
-                            <li>Projeto de reforço estrutural</li>
-                            <li>Especificações técnicas</li>
-                        </ul>
                     </div>
 
-                    <!-- Estudos de Viabilidade -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#06b6d4" opacity="0.1"/>
-                                <path d="M12 32L18 26L24 30L36 18L40 22L24 38L12 32Z" fill="#06b6d4"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">06</span>
+                                    <h3 class="service-title">Estudos de Viabilidade</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M12 32L18 26L24 30L36 18L40 22L24 38L12 32Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Análise técnica e econômica para avaliar a viabilidade de empreendimentos. Estudos preliminares considerando aspectos geotécnicos, estruturais, ambientais e regulamentares.</p>
+                                    <ul class="service-features">
+                                        <li>Análise técnico-econômica</li>
+                                        <li>Avaliação de riscos</li>
+                                        <li>Relatórios de viabilidade</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Estudos de Viabilidade</h3>
-                        <p class="service-description">
-                            Análise técnica e econômica para avaliar a viabilidade de empreendimentos. Estudos preliminares 
-                            considerando aspectos geotécnicos, estruturais, ambientais e regulamentares, fornecendo subsídios 
-                            para decisões de investimento e planejamento.
-                        </p>
-                        <ul class="service-features">
-                            <li>Análise técnico-econômica</li>
-                            <li>Avaliação de riscos</li>
-                            <li>Relatórios de viabilidade</li>
-                        </ul>
                     </div>
 
-                    <!-- Due Diligence -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#84cc16" opacity="0.1"/>
-                                <path d="M24 8C20 8 16 10 14 14L24 24L34 14C32 10 28 8 24 8Z" fill="#84cc16"/>
-                                <path d="M14 26C16 30 20 32 24 32C28 32 32 30 34 26L24 16L14 26Z" fill="#84cc16"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">07</span>
+                                    <h3 class="service-title">Due Diligence</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M24 8C20 8 16 10 14 14L24 24L34 14C32 10 28 8 24 8Z" fill="currentColor"/>
+                                            <path d="M14 26C16 30 20 32 24 32C28 32 32 30 34 26L24 16L14 26Z" fill="currentColor" opacity="0.6"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Auditoria técnica detalhada de projetos e empreendimentos para identificação de riscos, passivos técnicos e oportunidades de melhoria. Avaliação crítica de documentação técnica.</p>
+                                    <ul class="service-features">
+                                        <li>Auditoria técnica completa</li>
+                                        <li>Identificação de riscos</li>
+                                        <li>Avaliação de conformidade</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Due Diligence</h3>
-                        <p class="service-description">
-                            Auditoria técnica detalhada de projetos e empreendimentos para identificação de riscos, 
-                            passivos técnicos e oportunidades de melhoria. Avaliação crítica de documentação técnica, 
-                            conformidade normativa e adequação das soluções adotadas.
-                        </p>
-                        <ul class="service-features">
-                            <li>Auditoria técnica completa</li>
-                            <li>Identificação de riscos</li>
-                            <li>Avaliação de conformidade</li>
-                        </ul>
                     </div>
 
-                    <!-- Gerenciamento e Fiscalização -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#f97316" opacity="0.1"/>
-                                <path d="M16 16H32V20H16V16ZM16 22H32V26H16V22ZM16 28H28V32H16V28Z" fill="#f97316"/>
-                                <path d="M34 28L38 32L34 36" stroke="#f97316" stroke-width="3" fill="none"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">08</span>
+                                    <h3 class="service-title">Gerenciamento e Fiscalização</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M16 16H32V20H16V16ZM16 22H32V26H16V22ZM16 28H28V32H16V28Z" fill="currentColor"/>
+                                            <path d="M34 28L38 32L34 36" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Gestão completa de projetos com foco em prazos, custos e qualidade. Coordenação de equipes multidisciplinares e controle rigoroso de cronogramas.</p>
+                                    <ul class="service-features">
+                                        <li>Gestão de prazos e custos</li>
+                                        <li>Coordenação de equipes</li>
+                                        <li>Controle de qualidade</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Gerenciamento e Fiscalização</h3>
-                        <p class="service-description">
-                            Gestão completa de projetos com foco em prazos, custos e qualidade. Coordenação de equipes 
-                            multidisciplinares, controle de cronogramas, fiscalização técnica e administrativa, garantindo 
-                            o cumprimento de todas as especificações e normas aplicáveis.
-                        </p>
-                        <ul class="service-features">
-                            <li>Gestão de prazos e custos</li>
-                            <li>Coordenação de equipes</li>
-                            <li>Controle de qualidade</li>
-                        </ul>
                     </div>
 
-                    <!-- Projeto Básico -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#6366f1" opacity="0.1"/>
-                                <path d="M12 12H36V16H12V12ZM12 18H36V38H12V18Z" fill="none" stroke="#6366f1" stroke-width="2"/>
-                                <path d="M16 22H20V26H16V22ZM24 22H32V24H24V22ZM24 26H32V28H24V26Z" fill="#6366f1"/>
-                                <path d="M16 30H20V34H16V30ZM24 30H32V32H24V30ZM24 34H28V36H24V34Z" fill="#6366f1"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">09</span>
+                                    <h3 class="service-title">Projeto Básico</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M12 12H36V16H12V12ZM12 18H36V38H12V18Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M16 22H20V26H16V22ZM24 22H32V24H24V22ZM24 26H32V28H24V26Z" fill="currentColor"/>
+                                            <path d="M16 30H20V34H16V30ZM24 30H32V32H24V30Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Desenvolvimento de projetos básicos com definição de soluções técnicas, dimensionamentos preliminares e especificações gerais para licitações e aprovações.</p>
+                                    <ul class="service-features">
+                                        <li>Soluções técnicas definidas</li>
+                                        <li>Memoriais e especificações</li>
+                                        <li>Orçamentos estimativos</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Projeto Básico</h3>
-                        <p class="service-description">
-                            Desenvolvimento de projetos básicos com definição de soluções técnicas, dimensionamentos 
-                            preliminares e especificações gerais. Elaboração de desenhos, memoriais descritivos e 
-                            orçamentos estimativos para licitações e aprovações.
-                        </p>
-                        <ul class="service-features">
-                            <li>Soluções técnicas definidas</li>
-                            <li>Memoriais e especificações</li>
-                            <li>Orçamentos estimativos</li>
-                        </ul>
                     </div>
 
-                    <!-- Projeto Executivo -->
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="24" cy="24" r="20" fill="#ec4899" opacity="0.1"/>
-                                <path d="M12 10H36V14H12V10ZM12 16H36V40H12V16Z" fill="none" stroke="#ec4899" stroke-width="2"/>
-                                <path d="M16 20H22V24H16V20ZM26 20H32V22H26V20ZM26 24H32V26H26V24Z" fill="#ec4899"/>
-                                <path d="M16 28H22V32H16V28ZM26 28H32V30H26V28ZM26 32H32V34H26V32Z" fill="#ec4899"/>
-                                <path d="M16 36H22V40H16V36ZM26 36H32V38H26V36Z" fill="#ec4899"/>
-                            </svg>
+                    <div class="service-card reveal-card" data-accordion="service">
+                        <div class="service-card-inner">
+                            <div class="service-accordion-header">
+                                <div class="service-accordion-header-left">
+                                    <span class="service-num">10</span>
+                                    <h3 class="service-title">Projeto Executivo</h3>
+                                </div>
+                                <svg class="service-accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+                            </div>
+                            <div class="service-accordion-body">
+                                <div class="service-accordion-body-inner">
+                                    <div class="service-icon">
+                                        <svg width="36" height="36" viewBox="0 0 48 48" fill="none">
+                                            <path d="M12 10H36V14H12V10ZM12 16H36V40H12V16Z" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M16 20H22V24H16V20ZM26 20H32V22H26V20ZM26 24H32V26H26V24Z" fill="currentColor"/>
+                                            <path d="M16 28H22V32H16V28ZM26 28H32V30H26V28ZM26 32H32V34H26V32Z" fill="currentColor"/>
+                                            <path d="M16 36H22V40H16V36ZM26 36H32V38H26V36Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                    <p class="service-desc">Detalhamento completo para execução da obra com todos os elementos necessários — desenhos detalhados, especificações técnicas precisas e memoriais de cálculo estrutural.</p>
+                                    <ul class="service-features">
+                                        <li>Detalhamento executivo completo</li>
+                                        <li>Especificações técnicas precisas</li>
+                                        <li>Memoriais de cálculo</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <h3 class="service-title">Projeto Executivo</h3>
-                        <p class="service-description">
-                            Detalhamento completo para execução da obra com todos os elementos necessários. Desenhos 
-                            detalhados, especificações técnicas precisas, quantitativos exatos e memoriais de cálculo 
-                            estrutural, permitindo a execução direta sem necessidade de informações complementares.
-                        </p>
-                        <ul class="service-features">
-                            <li>Detalhamento executivo completo</li>
-                            <li>Especificações técnicas precisas</li>
-                            <li>Memoriais de cálculo</li>
-                        </ul>
                     </div>
-                </div>
 
-                <!-- Call to Action -->
-                <div class="services-cta">
-                    <div class="cta-content">
-                        <h3 class="cta-title">Precisa de Nossos Serviços?</h3>
-                        <p class="cta-description">
-                            Entre em contato conosco para discutir como podemos ajudar em seu projeto. 
-                            Nossa equipe está pronta para fornecer soluções personalizadas e eficientes.
-                        </p>
-                        <div class="cta-buttons">
-                            <a href="#contato" class="btn btn-primary">Solicitar Orçamento</a>
-                            <a href="#contato" class="btn btn-secondary">Fale Conosco</a>
-                        </div>
-                    </div>
+                </div><!-- /.services-grid -->
+
+                <div class="services-cta reveal-block">
+                    <p>Pronto para discutir seu projeto?</p>
+                    <a href="#contato" class="btn btn-primary">
+                        <span>Solicitar Orçamento</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
                 </div>
             </div>
         </section>
 
+
+        <!-- ═══ PROJECTS ═══ -->
         <section id="projetos" class="projects">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Projetos</h2>
-                    <p class="section-subtitle">Principais projetos de infraestrutura metropolitana</p>
+                <div class="section-header reveal-header">
+                    <span class="section-label">Projetos</span>
+                    <h2 class="section-title">Expansão do Metrô<br>de São Paulo</h2>
+                    <p class="section-subtitle">Participação fundamental em soluções estruturais e geotécnicas para a maior metrópole do Brasil</p>
                 </div>
-                
-                <!-- Featured Metro Projects -->
-                <div class="projects-featured">
-                    <div class="featured-intro">
-                        <h3 class="featured-title">Projetos de Expansão do Metrô de São Paulo</h3>
-                        <p class="featured-description">
-                            A Latanegeo teve participação fundamental no desenvolvimento de soluções estruturais e geotécnicas para a expansão do sistema metropolitano de São Paulo, contribuindo para a modernização e ampliação da mobilidade urbana na maior metrópole do país.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="projects-grid metro-projects">
-                    <!-- Metro Line 5 -->
-                    <div class="project-card metro-card">
-                        <div class="project-image">
-                            <div class="metro-placeholder line-5">
-                                <svg width="100%" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Background gradient -->
-                                    <rect width="400" height="240" fill="url(#metroGradient5)"/>
-                                    
-                                    <!-- Metro tunnel structure -->
-                                    <ellipse cx="200" cy="120" rx="160" ry="50" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="8,4"/>
-                                    <ellipse cx="200" cy="120" rx="120" ry="35" fill="none" stroke="#8b5cf6" stroke-width="2"/>
-                                    
-                                    <!-- Train representation -->
-                                    <rect x="120" y="105" width="160" height="30" rx="15" fill="#8b5cf6"/>
-                                    <rect x="130" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="160" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="190" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="220" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="250" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    
-                                    <!-- Station indicators -->
-                                    <circle cx="80" cy="190" r="8" fill="#8b5cf6"/>
-                                    <circle cx="140" cy="190" r="8" fill="#8b5cf6"/>
-                                    <circle cx="200" cy="190" r="8" fill="#8b5cf6"/>
-                                    <circle cx="260" cy="190" r="8" fill="#8b5cf6"/>
-                                    <circle cx="320" cy="190" r="8" fill="#8b5cf6"/>
-                                    
-                                    <!-- Line connection -->
-                                    <line x1="80" y1="190" x2="320" y2="190" stroke="#8b5cf6" stroke-width="4"/>
-                                    
-                                    <defs>
-                                        <linearGradient id="metroGradient5" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#f3f4f6"/>
-                                            <stop offset="100%" stop-color="#e5e7eb"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                <div class="line-badge line-5-badge">Linha 5 - Lilás</div>
+            </div>
+
+            <!-- Horizontal scroll on desktop -->
+            <div class="projects-scroll-outer">
+                <div class="projects-track">
+
+                    <article class="project-card reveal-card">
+                        <div class="project-card-image">
+                            <div class="project-image-inner metro-l5">
+                                <div class="metro-line-viz">
+                                    <div class="metro-train" style="background:#8b5cf6"></div>
+                                    <div class="metro-stations">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="metro-line-bar" style="background:#8b5cf6"></div>
+                                </div>
+                                <span class="line-badge" style="background:#8b5cf6">Linha 5 — Lilás</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <h3>Metro Linha 5 - Lilás</h3>
-                            <p>Desenvolvimento de soluções estruturais e geotécnicas para a expansão da Linha 5-Lilás, incluindo análise de solo, projeto de fundações especiais e estruturas de contenção para túneis em áreas densamente urbanizadas da zona sul de São Paulo.</p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Extensão:</span>
-                                    <span class="detail-value">20,2 km</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Estações:</span>
-                                    <span class="detail-value">17 estações</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Região:</span>
-                                    <span class="detail-value">Zona Sul</span>
-                                </div>
+                        <div class="project-card-content">
+                            <h3>Metro Linha 5 · Lilás</h3>
+                            <p>Soluções estruturais e geotécnicas para a expansão da Linha 5-Lilás, incluindo análise de solo, projeto de fundações especiais e estruturas de contenção para túneis em áreas densamente urbanizadas.</p>
+                            <div class="project-meta">
+                                <div class="meta-item"><span class="meta-label">Extensão</span><span class="meta-val">20,2 km</span></div>
+                                <div class="meta-item"><span class="meta-label">Estações</span><span class="meta-val">17</span></div>
+                                <div class="meta-item"><span class="meta-label">Região</span><span class="meta-val">Zona Sul</span></div>
                             </div>
                             <div class="project-tags">
-                                <span class="tag metro-tag">Geotécnica</span>
-                                <span class="tag metro-tag">Estrutural</span>
-                                <span class="tag metro-tag">Túneis</span>
+                                <span>Geotécnica</span><span>Estrutural</span><span>Túneis</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Metro Line 4 -->
-                    <div class="project-card metro-card">
-                        <div class="project-image">
-                            <div class="metro-placeholder line-4">
-                                <svg width="100%" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Background gradient -->
-                                    <rect width="400" height="240" fill="url(#metroGradient4)"/>
-                                    
-                                    <!-- Metro tunnel structure -->
-                                    <ellipse cx="200" cy="120" rx="160" ry="50" fill="none" stroke="#fbbf24" stroke-width="3" stroke-dasharray="8,4"/>
-                                    <ellipse cx="200" cy="120" rx="120" ry="35" fill="none" stroke="#fbbf24" stroke-width="2"/>
-                                    
-                                    <!-- Train representation -->
-                                    <rect x="120" y="105" width="160" height="30" rx="15" fill="#fbbf24"/>
-                                    <rect x="130" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="160" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="190" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="220" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="250" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    
-                                    <!-- Station indicators -->
-                                    <circle cx="80" cy="190" r="8" fill="#fbbf24"/>
-                                    <circle cx="140" cy="190" r="8" fill="#fbbf24"/>
-                                    <circle cx="200" cy="190" r="8" fill="#fbbf24"/>
-                                    <circle cx="260" cy="190" r="8" fill="#fbbf24"/>
-                                    <circle cx="320" cy="190" r="8" fill="#fbbf24"/>
-                                    
-                                    <!-- Line connection -->
-                                    <line x1="80" y1="190" x2="320" y2="190" stroke="#fbbf24" stroke-width="4"/>
-                                    
-                                    <defs>
-                                        <linearGradient id="metroGradient4" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#f3f4f6"/>
-                                            <stop offset="100%" stop-color="#e5e7eb"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                <div class="line-badge line-4-badge">Linha 4 - Amarela</div>
+                    <article class="project-card reveal-card">
+                        <div class="project-card-image">
+                            <div class="project-image-inner metro-l4">
+                                <div class="metro-line-viz">
+                                    <div class="metro-train" style="background:#fbbf24"></div>
+                                    <div class="metro-stations">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="metro-line-bar" style="background:#fbbf24"></div>
+                                </div>
+                                <span class="line-badge" style="background:#b45309">Linha 4 — Amarela</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <h3>Metro Linha 4 - Amarela</h3>
-                            <p>Participação no projeto estrutural da Linha 4-Amarela, com foco em soluções geotécnicas para travessias sob o Rio Pinheiros e análise de estabilidade de taludes. Projeto envolveu técnicas avançadas de contenção e impermeabilização.</p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Extensão:</span>
-                                    <span class="detail-value">12,8 km</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Estações:</span>
-                                    <span class="detail-value">11 estações</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Região:</span>
-                                    <span class="detail-value">Zona Oeste</span>
-                                </div>
+                        <div class="project-card-content">
+                            <h3>Metro Linha 4 · Amarela</h3>
+                            <p>Projeto estrutural com foco em soluções geotécnicas para travessias sob o Rio Pinheiros e análise de estabilidade de taludes. Técnicas avançadas de contenção e impermeabilização.</p>
+                            <div class="project-meta">
+                                <div class="meta-item"><span class="meta-label">Extensão</span><span class="meta-val">12,8 km</span></div>
+                                <div class="meta-item"><span class="meta-label">Estações</span><span class="meta-val">11</span></div>
+                                <div class="meta-item"><span class="meta-label">Região</span><span class="meta-val">Zona Oeste</span></div>
                             </div>
                             <div class="project-tags">
-                                <span class="tag metro-tag">Geotécnica</span>
-                                <span class="tag metro-tag">Contenção</span>
-                                <span class="tag metro-tag">Subsolo</span>
+                                <span>Geotécnica</span><span>Contenção</span><span>Subsolo</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Metro Line 2 -->
-                    <div class="project-card metro-card">
-                        <div class="project-image">
-                            <div class="metro-placeholder line-2">
-                                <svg width="100%" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Background gradient -->
-                                    <rect width="400" height="240" fill="url(#metroGradient2)"/>
-                                    
-                                    <!-- Metro tunnel structure -->
-                                    <ellipse cx="200" cy="120" rx="160" ry="50" fill="none" stroke="#10b981" stroke-width="3" stroke-dasharray="8,4"/>
-                                    <ellipse cx="200" cy="120" rx="120" ry="35" fill="none" stroke="#10b981" stroke-width="2"/>
-                                    
-                                    <!-- Train representation -->
-                                    <rect x="120" y="105" width="160" height="30" rx="15" fill="#10b981"/>
-                                    <rect x="130" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="160" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="190" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="220" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="250" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    
-                                    <!-- Station indicators -->
-                                    <circle cx="80" cy="190" r="8" fill="#10b981"/>
-                                    <circle cx="140" cy="190" r="8" fill="#10b981"/>
-                                    <circle cx="200" cy="190" r="8" fill="#10b981"/>
-                                    <circle cx="260" cy="190" r="8" fill="#10b981"/>
-                                    <circle cx="320" cy="190" r="8" fill="#10b981"/>
-                                    
-                                    <!-- Line connection -->
-                                    <line x1="80" y1="190" x2="320" y2="190" stroke="#10b981" stroke-width="4"/>
-                                    
-                                    <defs>
-                                        <linearGradient id="metroGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#f3f4f6"/>
-                                            <stop offset="100%" stop-color="#e5e7eb"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                <div class="line-badge line-2-badge">Linha 2 - Verde</div>
+                    <article class="project-card reveal-card">
+                        <div class="project-card-image">
+                            <div class="project-image-inner metro-l2">
+                                <div class="metro-line-viz">
+                                    <div class="metro-train" style="background:#10b981"></div>
+                                    <div class="metro-stations">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="metro-line-bar" style="background:#10b981"></div>
+                                </div>
+                                <span class="line-badge" style="background:#059669">Linha 2 — Verde</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <h3>Metro Linha 2 - Verde</h3>
-                            <p>Consultoria em engenharia estrutural para modernização e expansão da Linha 2-Verde, incluindo reforço estrutural de estações existentes, análise sísmica e projeto de novas fundações para extensões da linha.</p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Extensão:</span>
-                                    <span class="detail-value">14,7 km</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Estações:</span>
-                                    <span class="detail-value">14 estações</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Região:</span>
-                                    <span class="detail-value">Centro-Sul</span>
-                                </div>
+                        <div class="project-card-content">
+                            <h3>Metro Linha 2 · Verde</h3>
+                            <p>Consultoria em engenharia estrutural para modernização e expansão da Linha 2-Verde, incluindo reforço estrutural de estações existentes e projeto de novas fundações.</p>
+                            <div class="project-meta">
+                                <div class="meta-item"><span class="meta-label">Extensão</span><span class="meta-val">14,7 km</span></div>
+                                <div class="meta-item"><span class="meta-label">Estações</span><span class="meta-val">14</span></div>
+                                <div class="meta-item"><span class="meta-label">Região</span><span class="meta-val">Centro-Sul</span></div>
                             </div>
                             <div class="project-tags">
-                                <span class="tag metro-tag">Estrutural</span>
-                                <span class="tag metro-tag">Modernização</span>
-                                <span class="tag metro-tag">Reforço</span>
+                                <span>Estrutural</span><span>Modernização</span><span>Reforço</span>
                             </div>
                         </div>
-                    </div>
+                    </article>
 
-                    <!-- Metro Line 1 -->
-                    <div class="project-card metro-card">
-                        <div class="project-image">
-                            <div class="metro-placeholder line-1">
-                                <svg width="100%" height="240" viewBox="0 0 400 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <!-- Background gradient -->
-                                    <rect width="400" height="240" fill="url(#metroGradient1)"/>
-                                    
-                                    <!-- Metro tunnel structure -->
-                                    <ellipse cx="200" cy="120" rx="160" ry="50" fill="none" stroke="#3b82f6" stroke-width="3" stroke-dasharray="8,4"/>
-                                    <ellipse cx="200" cy="120" rx="120" ry="35" fill="none" stroke="#3b82f6" stroke-width="2"/>
-                                    
-                                    <!-- Train representation -->
-                                    <rect x="120" y="105" width="160" height="30" rx="15" fill="#3b82f6"/>
-                                    <rect x="130" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="160" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="190" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="220" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    <rect x="250" y="110" width="20" height="20" rx="2" fill="#ffffff" opacity="0.8"/>
-                                    
-                                    <!-- Station indicators -->
-                                    <circle cx="80" cy="190" r="8" fill="#3b82f6"/>
-                                    <circle cx="140" cy="190" r="8" fill="#3b82f6"/>
-                                    <circle cx="200" cy="190" r="8" fill="#3b82f6"/>
-                                    <circle cx="260" cy="190" r="8" fill="#3b82f6"/>
-                                    <circle cx="320" cy="190" r="8" fill="#3b82f6"/>
-                                    
-                                    <!-- Line connection -->
-                                    <line x1="80" y1="190" x2="320" y2="190" stroke="#3b82f6" stroke-width="4"/>
-                                    
-                                    <defs>
-                                        <linearGradient id="metroGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" stop-color="#f3f4f6"/>
-                                            <stop offset="100%" stop-color="#e5e7eb"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                                <div class="line-badge line-1-badge">Linha 1 - Azul</div>
+                    <article class="project-card reveal-card">
+                        <div class="project-card-image">
+                            <div class="project-image-inner metro-l1">
+                                <div class="metro-line-viz">
+                                    <div class="metro-train" style="background:#3b82f6"></div>
+                                    <div class="metro-stations">
+                                        <span></span><span></span><span></span><span></span><span></span>
+                                    </div>
+                                    <div class="metro-line-bar" style="background:#3b82f6"></div>
+                                </div>
+                                <span class="line-badge" style="background:#1d4ed8">Linha 1 — Azul</span>
                             </div>
                         </div>
-                        <div class="project-content">
-                            <h3>Metro Linha 1 - Azul</h3>
-                            <p>Assessoria técnica especializada para manutenção e expansão da histórica Linha 1-Azul, primeira linha do metrô de São Paulo. Desenvolvimento de soluções para integração com novas tecnologias mantendo a operação contínua.</p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">Extensão:</span>
-                                    <span class="detail-value">20,2 km</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Estações:</span>
-                                    <span class="detail-value">23 estações</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">Região:</span>
-                                    <span class="detail-value">Norte-Sul</span>
-                                </div>
+                        <div class="project-card-content">
+                            <h3>Metro Linha 1 · Azul</h3>
+                            <p>Assessoria técnica especializada para manutenção e expansão da histórica Linha 1-Azul. Soluções para integração com novas tecnologias mantendo operação contínua.</p>
+                            <div class="project-meta">
+                                <div class="meta-item"><span class="meta-label">Extensão</span><span class="meta-val">20,2 km</span></div>
+                                <div class="meta-item"><span class="meta-label">Estações</span><span class="meta-val">23</span></div>
+                                <div class="meta-item"><span class="meta-label">Região</span><span class="meta-val">Norte-Sul</span></div>
                             </div>
                             <div class="project-tags">
-                                <span class="tag metro-tag">Manutenção</span>
-                                <span class="tag metro-tag">Estrutural</span>
-                                <span class="tag metro-tag">Histórico</span>
+                                <span>Manutenção</span><span>Estrutural</span><span>Histórico</span>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </article>
 
-                <!-- Project Stats -->
-                <div class="project-stats">
-                    <div class="stats-container">
-                        <h3 class="stats-title">Impacto dos Projetos</h3>
-                        <div class="stats-grid">
-                            <div class="stat-item">
-                                <div class="stat-number">67,9 km</div>
-                                <div class="stat-label">Extensão Total</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">65</div>
-                                <div class="stat-label">Estações</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">4,5 mi</div>
-                                <div class="stat-label">Usuários Diários</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Segurança</div>
-                            </div>
-                        </div>
+                </div><!-- /.projects-track -->
+            </div><!-- /.projects-scroll-outer -->
+
+            <!-- Project Stats -->
+            <div class="container">
+                <div class="project-stats reveal-block">
+                    <div class="pstat">
+                        <div class="pstat-num">67,9 km</div>
+                        <div class="pstat-label">Extensão Total</div>
+                    </div>
+                    <div class="pstat">
+                        <div class="pstat-num">65</div>
+                        <div class="pstat-label">Estações</div>
+                    </div>
+                    <div class="pstat">
+                        <div class="pstat-num">4,5 mi</div>
+                        <div class="pstat-label">Usuários Diários</div>
+                    </div>
+                    <div class="pstat">
+                        <div class="pstat-num">100%</div>
+                        <div class="pstat-label">Segurança</div>
                     </div>
                 </div>
             </div>
         </section>
 
+
+        <!-- ═══ KNOW HALL ═══ -->
         <section id="know-hall" class="knowledge">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Know Hall</h2>
-                    <p class="section-subtitle">Centro de conhecimento e recursos técnicos</p>
+                <div class="section-header reveal-header">
+                    <span class="section-label">Know Hall</span>
+                    <h2 class="section-title">Centro de<br>Conhecimento</h2>
+                    <p class="section-subtitle">Recursos técnicos e desenvolvimento profissional</p>
                 </div>
-                <div class="knowledge-content">
-                    <div class="knowledge-grid">
-                        <div class="knowledge-item">
-                            <div class="knowledge-icon">📚</div>
-                            <h3>Artigos Técnicos</h3>
-                            <p>Publicações especializadas em engenharia estrutural e geotécnica</p>
-                        </div>
-                        <div class="knowledge-item">
-                            <div class="knowledge-icon">🔬</div>
-                            <h3>Pesquisa & Desenvolvimento</h3>
-                            <p>Inovação constante em métodos e tecnologias aplicadas</p>
-                        </div>
-                        <div class="knowledge-item">
-                            <div class="knowledge-icon">📊</div>
-                            <h3>Casos de Estudo</h3>
-                            <p>Análises detalhadas dos nossos projetos mais desafiadores</p>
-                        </div>
-                        <div class="knowledge-item">
-                            <div class="knowledge-icon">🎓</div>
-                            <h3>Capacitação</h3>
-                            <p>Programas de treinamento e desenvolvimento profissional</p>
-                        </div>
+
+                <div class="knowledge-grid">
+                    <div class="knowledge-item reveal-card">
+                        <div class="kn-num">01</div>
+                        <h3>Artigos Técnicos</h3>
+                        <p>Publicações especializadas em engenharia estrutural e geotécnica, contribuindo para o avanço da área.</p>
+                    </div>
+                    <div class="knowledge-item reveal-card">
+                        <div class="kn-num">02</div>
+                        <h3>Pesquisa &amp; Desenvolvimento</h3>
+                        <p>Inovação constante em métodos e tecnologias aplicadas à engenharia moderna.</p>
+                    </div>
+                    <div class="knowledge-item reveal-card">
+                        <div class="kn-num">03</div>
+                        <h3>Casos de Estudo</h3>
+                        <p>Análises detalhadas dos nossos projetos mais desafiadores com resultados e aprendizados documentados.</p>
+                    </div>
+                    <div class="knowledge-item reveal-card">
+                        <div class="kn-num">04</div>
+                        <h3>Capacitação</h3>
+                        <p>Programas de treinamento e desenvolvimento profissional para equipes de engenharia.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+
+        <!-- ═══ CONTACT ═══ -->
         <section id="contato" class="contact">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Contato</h2>
-                    <p class="section-subtitle">Entre em contato conosco para discutir seu projeto de engenharia</p>
-                </div>
-                
-                <!-- Contact Introduction -->
-                <div class="contact-intro">
-                    <div class="intro-text">
-                        <h3 class="contact-intro-title">Fale com Nossos Especialistas</h3>
-                        <p class="contact-intro-description">
-                            Nossa equipe está pronta para discutir suas necessidades de engenharia estrutural e geotécnica. 
-                            Entre em contato para uma consulta inicial gratuita e descubra como podemos contribuir para o 
-                            sucesso do seu projeto.
-                        </p>
-                    </div>
+                <div class="section-header reveal-header">
+                    <span class="section-label">Contato</span>
+                    <h2 class="section-title">Fale com nossos<br>especialistas</h2>
+                    <p class="section-subtitle">Consulta inicial gratuita. Resposta em até 24 horas.</p>
                 </div>
 
-                <div class="contact-main">
-                    <!-- Contact Information -->
-                    <div class="contact-info-section">
-                        <h3 class="contact-section-title">Informações de Contato</h3>
-                        <div class="contact-info">
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="12" fill="#3b82f6" opacity="0.1"/>
-                                        <path d="M8 12L16 18L24 12" stroke="#3b82f6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M8 10H24V22C24 22.5304 23.7893 23.0391 23.4142 23.4142C23.0391 23.7893 22.5304 24 22 24H10C9.46957 24 8.96086 23.7893 8.58579 23.4142C8.21071 23.0391 8 22.5304 8 22V10Z" stroke="#3b82f6" stroke-width="2"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Email</h4>
-                                    <p><a href="mailto:contato@latanegeo.com.br">contato@latanegeo.com.br</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="12" fill="#10b981" opacity="0.1"/>
-                                        <path d="M22 19.5C21.5 19.5 21 19.4 20.5 19.2C20.1 19.1 19.7 19.2 19.4 19.4L17.2 21.6C14.3 20.2 11.8 17.7 10.4 14.8L12.6 12.6C12.9 12.3 13 11.9 12.9 11.5C12.7 11 12.6 10.5 12.6 10C12.6 9.4 12.1 9 11.6 9H9.5C8.9 9 8.5 9.4 8.5 10C8.5 17.2 14.8 23.5 22 23.5C22.6 23.5 23 23.1 23 22.5V20.4C23 19.9 22.6 19.5 22 19.5Z" fill="#10b981"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Telefone</h4>
-                                    <p><a href="tel:+5511962334610">+55 11 96233-4610</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="12" fill="#f59e0b" opacity="0.1"/>
-                                        <path d="M16 8C13.2 8 11 10.2 11 13C11 17 16 24 16 24C16 24 21 17 21 13C21 10.2 18.8 8 16 8ZM16 15.5C14.6 15.5 13.5 14.4 13.5 13S14.6 10.5 16 10.5S18.5 11.6 18.5 13S17.4 15.5 16 15.5Z" fill="#f59e0b"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Endereço</h4>
-                                    <p>Penha, São Paulo<br>SP - Brasil</p>
-                                </div>
-                            </div>
-                            <div class="contact-item">
-                                <div class="contact-icon">
-                                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="16" cy="16" r="12" fill="#8b5cf6" opacity="0.1"/>
-                                        <circle cx="16" cy="16" r="3" fill="#8b5cf6"/>
-                                        <path d="M16 9V13M16 19V23M23 16H19M13 16H9" stroke="#8b5cf6" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                </div>
-                                <div class="contact-details">
-                                    <h4>Horário de Funcionamento</h4>
-                                    <p>Segunda a Sexta: 8h às 18h<br>Sábado: 8h às 12h</p>
-                                </div>
-                            </div>
+                <div class="contact-layout">
+
+                    <!-- Info -->
+                    <div class="contact-info reveal-block">
+                        <div class="contact-info-item">
+                            <span class="ci-label">Email</span>
+                            <a href="mailto:contato@latanegeo.com.br">contato@latanegeo.com.br</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="ci-label">Telefone</span>
+                            <a href="tel:+5511962334610">+55 11 96233-4610</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="ci-label">Localização</span>
+                            <span>Penha, São Paulo — SP</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="ci-label">Horário</span>
+                            <span>Seg–Sex: 8h–18h<br>Sáb: 8h–12h</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="ci-label">LinkedIn</span>
+                            <a href="https://linkedin.com/company/latanegeo" target="_blank" rel="noopener">linkedin.com/company/latanegeo</a>
                         </div>
                     </div>
 
-                    <!-- Contact Form -->
-                    <div class="contact-form-section">
-                        <h3 class="contact-section-title">Envie sua Mensagem</h3>
-                        <form class="contact-form">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="firstName">Nome *</label>
-                                    <input type="text" id="firstName" name="firstName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="lastName">Sobrenome *</label>
-                                    <input type="text" id="lastName" name="lastName" required>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="email">Email *</label>
-                                    <input type="email" id="email" name="email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="phone">Telefone</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+55 11 9999-9999">
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="company">Empresa/Organização</label>
-                                <input type="text" id="company" name="company">
-                            </div>
-                            <div class="form-group">
-                                <label for="service">Tipo de Serviço *</label>
-                                <select id="service" name="service" required>
-                                    <option value="">Selecione o serviço</option>
-                                    <option value="consultoria">Consultoria</option>
-                                    <option value="ato">A.T.O. (Acompanhamento Técnico de Obra)</option>
-                                    <option value="analise-critica">Análise Crítica</option>
-                                    <option value="instrumentacao">Análise e Acompanhamento da Instrumentação</option>
-                                    <option value="projeto-recuperacao">Projeto de Recuperação</option>
-                                    <option value="viabilidade">Estudos de Viabilidade</option>
-                                    <option value="due-diligence">Due Diligence</option>
-                                    <option value="gerenciamento">Gerenciamento e Fiscalização</option>
-                                    <option value="projeto-basico">Projeto Básico</option>
-                                    <option value="projeto-executivo">Projeto Executivo</option>
-                                    <option value="outro">Outro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Assunto *</label>
-                                <input type="text" id="subject" name="subject" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Mensagem *</label>
-                                <textarea id="message" name="message" rows="6" required placeholder="Descreva detalhes do seu projeto, prazos, localização e outras informações relevantes..."></textarea>
-                            </div>
-                            <div class="form-group checkbox-group">
-                                <label class="checkbox-label">
-                                    <input type="checkbox" id="privacy" name="privacy" required>
-                                    <span class="checkmark"></span>
-                                    Li e aceito os <a href="#" target="_blank">termos de privacidade</a> *
-                                </label>
-                            </div>
-                            <div class="form-actions">
-                                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                                <p class="form-note">* Campos obrigatórios. Responderemos em até 24 horas.</p>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+                    <!-- Form -->
+                    <form class="contact-form reveal-block" id="contactForm" novalidate>
 
-                <!-- Map Section -->
-                <div class="contact-map">
-                    <h3 class="contact-section-title">Nossa Localização</h3>
-                    <div class="map-container">
-                        <div class="map-placeholder">
-                            <svg width="100%" height="300" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Map background -->
-                                <rect width="800" height="300" fill="#f1f5f9"/>
-                                
-                                <!-- Grid lines -->
-                                <defs>
-                                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-                                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#e2e8f0" stroke-width="1"/>
-                                    </pattern>
-                                </defs>
-                                <rect width="100%" height="100%" fill="url(#grid)" />
-                                
-                                <!-- Streets -->
-                                <path d="M0 150 L800 150" stroke="#cbd5e1" stroke-width="3"/>
-                                <path d="M200 0 L200 300" stroke="#cbd5e1" stroke-width="3"/>
-                                <path d="M600 0 L600 300" stroke="#cbd5e1" stroke-width="3"/>
-                                
-                                <!-- Buildings -->
-                                <rect x="50" y="80" width="120" height="60" fill="#e2e8f0" stroke="#94a3b8"/>
-                                <rect x="250" y="100" width="100" height="80" fill="#e2e8f0" stroke="#94a3b8"/>
-                                <rect x="450" y="60" width="80" height="100" fill="#e2e8f0" stroke="#94a3b8"/>
-                                <rect x="650" y="90" width="120" height="70" fill="#e2e8f0" stroke="#94a3b8"/>
-                                
-                                <!-- Latanegeo location marker -->
-                                <circle cx="400" cy="150" r="8" fill="#ef4444"/>
-                                <circle cx="400" cy="150" r="20" fill="#ef4444" opacity="0.3"/>
-                                <circle cx="400" cy="150" r="35" fill="#ef4444" opacity="0.1"/>
-                                
-                                <!-- Location label -->
-                                <rect x="350" y="115" width="100" height="25" rx="4" fill="white" stroke="#e2e8f0"/>
-                                <text x="400" y="130" text-anchor="middle" fill="#0f172a" font-size="12" font-weight="600">Latanegeo</text>
-                                
-                                <!-- Street names -->
-                                <text x="400" y="145" text-anchor="middle" fill="#64748b" font-size="10">Penha, São Paulo</text>
-                                
-                                <!-- Compass -->
-                                <circle cx="750" cy="50" r="25" fill="white" stroke="#e2e8f0" stroke-width="2"/>
-                                <path d="M750 30 L755 45 L750 50 L745 45 Z" fill="#ef4444"/>
-                                <text x="750" y="20" text-anchor="middle" fill="#64748b" font-size="8">N</text>
-                            </svg>
+                        <div class="form-row">
+                            <div class="form-field">
+                                <input type="text" id="firstName" name="firstName" required placeholder=" " autocomplete="given-name">
+                                <label for="firstName">Nome *</label>
+                            </div>
+                            <div class="form-field">
+                                <input type="text" id="lastName" name="lastName" required placeholder=" " autocomplete="family-name">
+                                <label for="lastName">Sobrenome *</label>
+                            </div>
                         </div>
-                        <div class="map-info">
-                            <p>
-                                <strong>Região da Penha, São Paulo</strong><br>
-                                Localização estratégica na zona leste de São Paulo, 
-                                com fácil acesso às principais vias da cidade.
-                            </p>
-                            <a href="https://maps.google.com/?q=Penha,São Paulo" target="_blank" class="btn btn-outline">
-                                Ver no Google Maps
-                            </a>
+
+                        <div class="form-row">
+                            <div class="form-field">
+                                <input type="email" id="email" name="email" required placeholder=" " autocomplete="email">
+                                <label for="email">Email *</label>
+                            </div>
+                            <div class="form-field">
+                                <input type="tel" id="phone" name="phone" placeholder=" " autocomplete="tel">
+                                <label for="phone">Telefone</label>
+                            </div>
                         </div>
-                    </div>
-                </div>
+
+                        <div class="form-field">
+                            <input type="text" id="company" name="company" placeholder=" " autocomplete="organization">
+                            <label for="company">Empresa / Organização</label>
+                        </div>
+
+                        <div class="form-field form-field--select">
+                            <select id="service" name="service" required>
+                                <option value="" disabled selected></option>
+                                <option value="consultoria">Consultoria</option>
+                                <option value="ato">A.T.O. (Acompanhamento Técnico de Obra)</option>
+                                <option value="analise-critica">Análise Crítica</option>
+                                <option value="instrumentacao">Análise e Acompanhamento da Instrumentação</option>
+                                <option value="projeto-recuperacao">Projeto de Recuperação</option>
+                                <option value="viabilidade">Estudos de Viabilidade</option>
+                                <option value="due-diligence">Due Diligence</option>
+                                <option value="gerenciamento">Gerenciamento e Fiscalização</option>
+                                <option value="projeto-basico">Projeto Básico</option>
+                                <option value="projeto-executivo">Projeto Executivo</option>
+                                <option value="outro">Outro</option>
+                            </select>
+                            <label for="service">Tipo de Serviço *</label>
+                        </div>
+
+                        <div class="form-field">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Assunto *</label>
+                        </div>
+
+                        <div class="form-field form-field--textarea">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Mensagem *</label>
+                        </div>
+
+                        <div class="form-check">
+                            <label class="check-label">
+                                <input type="checkbox" name="privacy" required>
+                                <span class="check-box"></span>
+                                <span>Li e aceito os <a href="#" target="_blank">termos de privacidade</a> *</span>
+                            </label>
+                        </div>
+
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <span>Enviar Mensagem</span>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </button>
+                            <p class="form-note">* Campos obrigatórios</p>
+                        </div>
+
+                    </form>
+
+                </div><!-- /.contact-layout -->
             </div>
         </section>
+
     </main>
 
+
+    <!-- ═══ FOOTER ═══ -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-top">
                 <div class="footer-brand">
-                    <h3>Latanegeo</h3>
-                    <p>Engenharia Estrutural & Geotécnica</p>
+                    <a href="#inicial" class="footer-logo">
+                        <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+                            <rect width="40" height="40" rx="6" fill="#c17f4a"/>
+                            <path d="M8 32L32 8M12 28L28 12" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                            <circle cx="20" cy="20" r="3" fill="#0a0e1a"/>
+                        </svg>
+                        <span>Latanegeo</span>
+                    </a>
+                    <p>Engenharia Estrutural &amp; Geotécnica — São Paulo, Brasil</p>
+                    <a href="https://linkedin.com/company/latanegeo" target="_blank" rel="noopener" class="footer-linkedin">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </a>
                 </div>
-                <div class="footer-links">
-                    <a href="#inicial">Inicial</a>
-                    <a href="#latanegeo">LatanEGeo</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#projetos">Projetos</a>
-                    <a href="#know-hall">Know Hall</a>
-                    <a href="#contato">Contato</a>
+
+                <div class="footer-cols">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#inicial">Inicial</a></li>
+                            <li><a href="#latanegeo">LatanEGeo</a></li>
+                            <li><a href="#servicos">Serviços</a></li>
+                            <li><a href="#projetos">Projetos</a></li>
+                            <li><a href="#know-hall">Know Hall</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="#servicos">Consultoria</a></li>
+                            <li><a href="#servicos">A.T.O.</a></li>
+                            <li><a href="#servicos">Análise Crítica</a></li>
+                            <li><a href="#servicos">Instrumentação</a></li>
+                            <li><a href="#servicos">Due Diligence</a></li>
+                            <li><a href="#servicos">Proj. Executivo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contato</h4>
+                        <ul class="footer-contact">
+                            <li><a href="mailto:contato@latanegeo.com.br">contato@latanegeo.com.br</a></li>
+                            <li><a href="tel:+5511962334610">+55 11 96233-4610</a></li>
+                            <li>Penha, São Paulo — SP</li>
+                            <li>Seg–Sex: 8h–18h</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
                 <p>&copy; 2024 Latanegeo. Todos os direitos reservados.</p>
+                <p>Engenharia com excelência técnica e compromisso com a qualidade.</p>
             </div>
         </div>
     </footer>
-    </div> <!-- End Main Website Content -->
 
-    <script src="script.js"></script>
+</div><!-- /#site -->
+
+
+<!-- Mobile nav overlay -->
+<div id="mobileNav" class="mobile-nav" aria-hidden="true">
+    <ul>
+        <li><a href="#inicial">Inicial</a></li>
+        <li><a href="#latanegeo">LatanEGeo</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#know-hall">Know Hall</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+</div>
+
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
