@@ -647,45 +647,40 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
     margin-top: 0.5rem;
 }
 
-.marquee-outer { display: flex; flex-direction: column; gap: 1.5rem; }
-
-.marquee-row {
-    overflow: hidden;
-    width: 100%;
-    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+@keyframes marqueeLogos {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
 }
 
-.marquee-track {
+.clients-marquee-outer {
+    overflow: hidden;
+    width: 100%;
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.clients-marquee-track {
     display: flex;
     align-items: center;
     width: max-content;
+    animation: marqueeLogos 30s linear infinite;
 }
 
-.marquee-forward .marquee-track  { animation: marquee-fwd 28s linear infinite; }
-.marquee-reverse .marquee-track  { animation: marquee-rev 28s linear infinite; }
-
-@keyframes marquee-fwd { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-@keyframes marquee-rev { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
-
 @media (prefers-reduced-motion: reduce) {
-    .marquee-forward .marquee-track,
-    .marquee-reverse .marquee-track { animation-play-state: paused; }
+    .clients-marquee-track { animation-play-state: paused; }
 }
 
 .client-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 2.5rem;
     flex-shrink: 0;
+    padding: 0 2.5rem;
 }
 
 .client-logo img {
-    height: 52px;
+    max-height: 64px;
     width: auto;
-    max-width: 180px;
     object-fit: contain;
+    filter: none;
+    opacity: 1;
 }
 
 
@@ -1654,7 +1649,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
 
     /* ── Hero ─────────────────────────────── */
     .hero { padding: 100px 1.25rem 60px; }
-    .hero-heading { font-size: clamp(3rem, 17vw, 5rem); }
+    .hero-heading { font-size: clamp(2.2rem, 12vw, 3.5rem); margin-left: 0; }
+    .hero-word { overflow: visible; }
     .hero-desc { font-size: 0.875rem; line-height: 1.75; }
     .hero-actions {
         flex-direction: column;
@@ -1666,12 +1662,12 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
     }
     .hero-stats {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 0;
         margin-top: 2.5rem;
         border: 1px solid var(--border);
         border-radius: var(--radius-sm);
-        overflow: hidden;
+        overflow: visible;
     }
     .hero-stat {
         padding: 1rem 0.75rem;
@@ -1679,14 +1675,19 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
         text-align: center;
     }
     .hero-stat:first-child { border-left: none; }
+    .hero-stat:nth-child(3) {
+        grid-column: 1 / -1;
+        border-left: none;
+        border-top: 1px solid var(--border);
+    }
     .stat-num { font-size: 1.5rem; }
     .stat-label { font-size: 0.6rem; letter-spacing: 0.05em; }
 
     /* ── Clients ──────────────────────────── */
     .clients { padding: 2rem 0; }
-    .client-logo { padding: 0 1.5rem; }
-    .client-logo img { height: 24px; max-width: 100px; }
     .clients-header { margin-bottom: 1.5rem; }
+    .client-logo { padding: 0 1.5rem; }
+    .client-logo img { max-height: 44px; }
 
     /* ── About — MVV carousel ─────────────── */
     .mvv-grid {
@@ -1868,15 +1869,38 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); font-weight: 700; lin
         text-align: center;
         gap: 0.5rem;
     }
+
+    /* ── Section heading overlap fix ─────── */
+    .title-line-wrap { overflow: visible; }
+    .section-title { margin-bottom: 0.5rem; }
+    .section-subtitle { position: static; margin-top: 0.75rem; }
 }
 
 @media (max-width: 480px) {
-    .hero-heading { font-size: clamp(2.8rem, 16vw, 4rem); }
+    .hero-heading { font-size: clamp(2rem, 11vw, 2.8rem); }
     .project-stats { grid-template-columns: repeat(2, 1fr); }
 }
 
 /* Hidden by default — mobile media query shows it */
 .swipe-hint { display: none; }
+
+/* ── Scroll hint for horizontal scroll containers ── */
+.scroll-hint {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-warm);
+    opacity: 0.7;
+    margin-top: 0.75rem;
+    padding-left: 0.5rem;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+@media (max-width: 768px) { .scroll-hint { display: flex; } }
+.scroll-hint.is-hidden { opacity: 0; }
 
 /* Service accordion — chevron hidden on desktop (body always open) */
 .service-accordion-chevron { display: none; }

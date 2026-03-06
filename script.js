@@ -672,6 +672,22 @@ function initMobileAccordion() {
 /* ══════════════════════════════════════════════════════════
    MAIN INIT — called after loader exits
 ══════════════════════════════════════════════════════════ */
+function initScrollHints() {
+    document.querySelectorAll('.scroll-hint').forEach(hint => {
+        const selector = hint.dataset.scrollTarget;
+        if (!selector) return;
+        const container = hint.previousElementSibling.matches
+            ? hint.previousElementSibling
+            : document.querySelector(selector);
+        const target = document.querySelector(selector) || container;
+        if (!target) return;
+        target.addEventListener('scroll', function hide() {
+            hint.classList.add('is-hidden');
+            target.removeEventListener('scroll', hide);
+        }, { passive: true });
+    });
+}
+
 function startSite() {
     // Init Lenis
     initLenis();
@@ -687,6 +703,7 @@ function startSite() {
     initDividerLines();
     initContactForm();
     initMobileAccordion();
+    initScrollHints();
 
     // Refresh ScrollTrigger after fonts + one full paint cycle (ensures correct height measurements)
     document.fonts.ready.then(() => {
